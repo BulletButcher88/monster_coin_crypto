@@ -22,19 +22,19 @@ class Blocks extends Component {
 
   render() {
     console.log('this.state', this.state);
-      
+
     return (
       <div>
         <div><Link to='/'>Home</Link></div>
         <h3>Blocks</h3>
         <div>
           {
-            [...Array(Math.ceil(this.state.blocksLength/5)).keys()].map(key => {
-              const paginatedId = key+1;
+            [...Array(Math.ceil(this.state.blocksLength / 5)).keys()].map(key => {
+              const paginatedId = key + 1;
 
               return (
                 <span key={key} onClick={this.fetchPaginatedBlocks(paginatedId)}>
-                  <Button bsSize="small" bsStyle="danger">
+                  <Button bsSize="small" bsStyle="warning">
                     {paginatedId}
                   </Button>{' '}
                 </span>

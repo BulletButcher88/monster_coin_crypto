@@ -17,13 +17,13 @@ class App extends Component {
     return (
       <div className='App'>
         <img className='logo' src={logo}></img>
-        <br />
         <div>
-          Welcome to the blockchain...
+          Monster Coin - Crypto for you and your mates
         </div>
         <br />
-        <div><Link to='/blocks'>Blocks</Link></div>
         <div><Link to='/conduct-transaction'>Conduct a Transaction</Link></div>
+        <br />
+        <div><Link to='/blocks'>Blocks</Link></div>
         <div><Link to='/transaction-pool'>Transaction Pool</Link></div>
         <br />
         <div className='WalletInfo'>
