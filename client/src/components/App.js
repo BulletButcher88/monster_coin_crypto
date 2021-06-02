@@ -17,14 +17,22 @@ class App extends Component {
     return (
       <div className='App'>
         <img className='logo' src={logo}></img>
-        <div>
-          Monster Coin - Crypto for you and your mates
+        <div style={{ fontSize: 30 }}>
+          Monster Meeting Crypto
         </div>
         <br />
-        <div><Link to='/conduct-transaction'>Conduct a Transaction</Link></div>
-        <br />
-        <div><Link to='/blocks'>Blocks</Link></div>
-        <div><Link to='/transaction-pool'>Transaction Pool</Link></div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={styles.button}>
+            <Link to='/conduct-transaction' style={styles.btn_text}>Conduct a Transaction</Link>
+          </div>
+          <br />
+          <div style={styles.button}>
+            <Link to='/blocks' style={styles.btn_text}>Blocks</Link>
+          </div>
+          <div style={styles.button}>
+            <Link to='/transaction-pool' style={styles.btn_text}>Transaction Pool</Link>
+          </div>
+        </div>
         <br />
         <div className='WalletInfo'>
           <div>Address: {address}</div>
@@ -32,6 +40,20 @@ class App extends Component {
         </div>
       </div>
     );
+  }
+}
+
+const styles = {
+  button: {
+    background: 'grey',
+    margin: 8,
+    padding: 8,
+    borderRadius: 8,
+    width: 300
+  },
+  btn_text: {
+    color: 'white',
+    textDecoration: 'none'
   }
 }
 

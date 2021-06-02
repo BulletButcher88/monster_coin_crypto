@@ -43,7 +43,14 @@ class TransactionPool extends Component {
   render() {
     return (
       <div className='TransactionPool'>
-        <div><Link to='/'>Home</Link></div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={styles.button}>
+            <Link to='/' style={styles.btn_text}>Home</Link>
+          </div>
+          <div style={styles.button}>
+            <Link to='/blocks' style={styles.btn_text}>Blocks</Link>
+          </div>
+        </div>
         <h3>Transaction Pool</h3>
         {
           Object.values(this.state.transactionPoolMap).map(transaction => {
@@ -64,6 +71,20 @@ class TransactionPool extends Component {
         </Button>
       </div>
     )
+  }
+}
+
+const styles = {
+  button: {
+    background: 'grey',
+    margin: 8,
+    padding: 8,
+    borderRadius: 8,
+    width: 300
+  },
+  btn_text: {
+    color: 'white',
+    textDecoration: 'none'
   }
 }
 

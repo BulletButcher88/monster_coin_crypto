@@ -25,7 +25,16 @@ class Blocks extends Component {
 
     return (
       <div>
-        <div><Link to='/'>Home</Link></div>
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div style={styles.button}>
+              <Link to='/' style={styles.btn_text}>Home</Link>
+            </div>
+            <div style={styles.button}>
+              <Link to='/transaction-pool' style={styles.btn_text}>Transaction Pool</Link>
+            </div>
+          </div>
+        </div>
         <h3>Blocks</h3>
         <div>
           {
@@ -51,6 +60,20 @@ class Blocks extends Component {
         }
       </div>
     );
+  }
+}
+
+const styles = {
+  button: {
+    background: 'grey',
+    margin: 8,
+    padding: 8,
+    borderRadius: 8,
+    width: 300
+  },
+  btn_text: {
+    color: 'white',
+    textDecoration: 'none'
   }
 }
 

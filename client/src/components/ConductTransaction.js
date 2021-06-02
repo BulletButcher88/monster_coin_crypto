@@ -37,7 +37,16 @@ class ConductTransaction extends Component {
   render() {
     return (
       <div className='ConductTransaction'>
-        <Link to='/'>Home</Link>
+
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={styles.button}>
+            <Link to='/' style={styles.btn_text}>Home</Link>
+          </div>
+          <div style={styles.button}>
+            <Link to='/transaction-pool' style={styles.btn_text}>Transaction Pool</Link>
+          </div>
+        </div>
+
         <h3>Conduct a Transaction</h3>
         <br />
         <h4>Known Addresses</h4>
@@ -80,5 +89,19 @@ class ConductTransaction extends Component {
     )
   }
 };
+
+const styles = {
+  button: {
+    background: 'grey',
+    margin: 8,
+    padding: 8,
+    borderRadius: 8,
+    width: 300
+  },
+  btn_text: {
+    color: 'white',
+    textDecoration: 'none'
+  }
+}
 
 export default ConductTransaction;
