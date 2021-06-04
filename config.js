@@ -3,8 +3,8 @@ const INITIAL_DIFFICULTY = 3;
 
 const GENESIS_DATA = {
   timestamp: 1,
-  lastHash: '-----',
-  hash: 'hash-one',
+  lastHash: '-ORIGIN-',
+  hash: '-OG-HASH-999rqi897-',
   difficulty: INITIAL_DIFFICULTY,
   nonce: 0,
   data: []
