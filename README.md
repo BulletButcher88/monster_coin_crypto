@@ -1,4 +1,4 @@
-# Cryptocurrency on React Native App | Full-Stack
+# Monster Coin Cryptocurrency | Full-Stack | Reatch App
 
 
 GOAL:
