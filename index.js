@@ -21,7 +21,6 @@ const blockchain = new Blockchain();
 const transactionPool = new TransactionPool();
 const wallet = new Wallet();
 const pubsub = new PubSub({ blockchain, transactionPool, redisUrl: REDIS_URL });
-// const pubsub = new PubSub({ blockchain, transactionPool, wallet }); // for PubNub
 const transactionMiner = new TransactionMiner({ blockchain, transactionPool, wallet, pubsub });
 
 app.use(bodyParser.json());
